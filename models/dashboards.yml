@@ -1,0 +1,16 @@
+version: 2
+
+exposures:
+  - name: Executive_Dashboard
+    type: dashboard
+    maturity: low
+    url: https://6963b962.us2a.app.preset.io/superset/dashboard/p/MjpmnyR98Or/
+    description: Executive Dashboard about Airbnb listings and hosts
+
+    depends_on:
+      - ref('dim_listings_w_hosts')
+      - ref('mart_fullmoon_reviews')
+
+    owner:
+      name: Vladimir Ermilov
+      email: dbt-learn@gmail.com
